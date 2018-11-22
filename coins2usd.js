@@ -1,6 +1,6 @@
 (function ($){
     $.getCoinValue = function(token){
-        $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=' +token+ '&tsyms=USD,JPY,EUR', function(data){
+        $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=' +token+ '&tsyms=USD', function(data){
             console.log(data.USD);
             $('.converted').text(data.USD);
             $('#jpy').text(data.JPY);
